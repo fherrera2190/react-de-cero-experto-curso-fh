@@ -13,8 +13,24 @@ export const signInWithGoogle = async () => {
   } catch (error) {
     console.log(error);
     return {
-        ok:false,
-        errorMessage: error.message
-    }
+      ok: false,
+      errorMessage: error.message,
+    };
   }
 };
+
+export const signInWithUsernamePassword = async ({ email, password }) => {
+  try {
+    const result = await FirebaseAuth.signInWithEmailAndPassword(
+      email,
+      password
+    );
+    const { displayName, email, photoURL, uid } = result.user;
+    return { ok: true, displayName, email, photoURL, uid };
+  } catch (error) {
+    return {
+      ok: false,
+      errorMessage: error.message,
+    };
+  }
+}
