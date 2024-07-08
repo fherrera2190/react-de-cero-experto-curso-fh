@@ -1,10 +1,9 @@
-import { signInWithGoogle, signInWithUsernamePassword } from "../../firebase/providers";
+import { signInWithGoogle } from "../../firebase/providers";
 import { checkingCredentials, login, logout } from "./";
 
-export const checkingAuthentication = (email, password) => {
+export const checkingAuthentication = () => {
   return async (dispatch) => {
     dispatch(checkingCredentials());
-    
   };
 };
 
