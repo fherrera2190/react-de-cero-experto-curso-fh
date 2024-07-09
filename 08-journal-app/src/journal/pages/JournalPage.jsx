@@ -5,7 +5,7 @@ import { AddOutlined } from "@mui/icons-material";
 
 export const JournalPage = () => {
   return (
-    <JournalLayout>
+    <JournalLayout >
       {/* <Typography>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio minima
         dignissimos atque culpa cumque rerum quae. Rem sit labore dignissimos

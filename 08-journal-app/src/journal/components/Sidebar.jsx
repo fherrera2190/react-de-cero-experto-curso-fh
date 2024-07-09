@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { TurnedInNot } from "@mui/icons-material";
 import {
   Drawer,
@@ -12,7 +13,10 @@ import {
   Grid,
   ListItemText,
 } from "@mui/material";
+import { useSelector } from "react-redux";
 export const Sidebar = ({ drawerWidth = 240 }) => {
+  const { displayName } = useSelector((state) => state.auth);
+
   return (
     <Box
       component={"nav"}
@@ -28,7 +32,7 @@ export const Sidebar = ({ drawerWidth = 240 }) => {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Fernando Herrera
+            {displayName}
           </Typography>
         </Toolbar>
         <Divider />
