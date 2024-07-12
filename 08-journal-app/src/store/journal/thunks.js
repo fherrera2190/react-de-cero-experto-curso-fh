@@ -10,7 +10,7 @@ import {
 } from "./journalSlice";
 import { FirebaseDB } from "../../firebase/config";
 import { loadNotes } from "../../helpers/loadNotes";
-import { filesUpload } from "../../helpers/fileUpload";
+import { filesUpload } from "../../helpers/filesUpload";
 
 export const startNewNote = () => {
   return async (dispatch, getState) => {

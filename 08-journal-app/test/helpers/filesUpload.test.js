@@ -1,12 +1,14 @@
-import { filesUpload } from "../../src/helpers/fileUpload";
+/* eslint-disable no-undef */
+import { filesUpload } from "../../src/helpers/filesUpload";
 import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
-  cloud_name: import.meta.env.VITE_CLOUDINARY_NAME,
-  api_key: import.meta.env.VITE_CLOUDINARY_KEY,
-  api_secret: import.meta.env.VITE_CLOUDINARY_SECRET,
+  cloud_name: process.env.VITE_CLOUDINARY_NAME,
+  api_key: process.env.VITE_CLOUDINARY_KEY,
+  api_secret: process.env.VITE_CLOUDINARY_SECRET,
   secure: true,
 });
+
 /* eslint-disable no-undef */
 describe("Preubas en fileUpload", () => {
   test("Debe de subir el archivo correctamente a cloudinary", async () => {
@@ -23,10 +25,8 @@ describe("Preubas en fileUpload", () => {
 
     const url = await filesUpload(file);
     expect(typeof url).toBe("string");
-    console.log(url);
     const segments = url.split("/");
     const imageId = segments[segments.length - 1].replace(".jpg", "");
-    console.log(imageId);
     const cloudResponse = await cloudinary.api.delete_resources(
       ['journal/'+imageId],
       {
