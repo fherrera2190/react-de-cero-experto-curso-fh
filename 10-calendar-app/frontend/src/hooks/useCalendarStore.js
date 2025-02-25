@@ -21,7 +21,6 @@ export const useCalendarStore = () => {
 
   const startSavingEvent = async (calendarEvent) => {
     try {
-      console.log(calendarEvent._id);
       if (calendarEvent.id) {
         // Actualizando
         await calendarApi.put(`/api/events/${calendarEvent.id}`, calendarEvent);
@@ -30,8 +29,7 @@ export const useCalendarStore = () => {
         return;
       }
       const { data } = await calendarApi.post("/api/events", calendarEvent);
-      console.log(data)
-      dispatch(onAddNewEvent({ ...calendarEvent, id: data.id, user }));
+      dispatch(onAddNewEvent({ ...calendarEvent, id: data.evento.id, user }));
     } catch (error) {
       console.log(error);
       Swal.fire("Error al guardar", error.response.data?.msg, "error");
