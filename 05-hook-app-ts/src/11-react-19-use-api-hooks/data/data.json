@@ -1,0 +1,52 @@
+{
+  "planets": [
+    {
+      "id": "a1b2c3",
+      "name": "MERCURIO",
+      "type": "Planeta",
+      "distanceFromSun": "57.91 millones de km"
+    },
+    {
+      "id": "d4e5f6",
+      "name": "VENUS",
+      "type": "Planeta",
+      "distanceFromSun": "108.2 millones de km"
+    },
+    {
+      "id": "g7h8i9",
+      "name": "Tierra",
+      "type": "Planeta",
+      "distanceFromSun": "149.6 millones de km"
+    },
+    {
+      "id": "j0k1l2",
+      "name": "MARTE",
+      "type": "Planeta",
+      "distanceFromSun": "227.9 millones de km"
+    },
+    {
+      "id": "m3n4o5",
+      "name": "Júpiter",
+      "type": "Planeta",
+      "distanceFromSun": "778.5 millones de km"
+    },
+    {
+      "id": "3eee",
+      "name": "Nemesis",
+      "type": "Planeta",
+      "distanceFromSun": "80UH"
+    },
+    {
+      "id": "e8f6",
+      "name": "Nemopaskjdpas",
+      "type": "oasdaosdalks",
+      "distanceFromSun": "lala8333"
+    },
+    {
+      "id": "a024",
+      "name": "asdasdas",
+      "type": "asdasda",
+      "distanceFromSun": "asdadasda"
+    }
+  ]
+}
